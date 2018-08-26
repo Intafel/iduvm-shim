@@ -10,3 +10,7 @@ bin/goagen: ./vendor/github.com/goadesign/goa/goagen/main.go
 # Generate goagen client code
 client: bin/goagen
 	bin/goagen -d github.com/Intafel/iduvm-api/design client
+
+# Build a shared library for Darwin.
+bin/client.dylib: main.go
+	go build -v -o bin/client.dylib -buildmode=c-shared main.go
