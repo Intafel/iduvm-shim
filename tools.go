@@ -1,5 +1,5 @@
 // +build tools
-package main
+package tool
 
 // See https://github.com/golang/go/wiki/Modules#faq
 // This recommends tracking tools in a file such as this
