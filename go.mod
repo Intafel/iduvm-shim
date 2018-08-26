@@ -25,7 +25,7 @@ require (
 	github.com/satori/go.uuid v0.0.0-20180103174451-36e9d2ebbde5 // indirect
 	github.com/smartystreets/assertions v0.0.0-20180820201707-7c9eb446e3cf // indirect
 	github.com/smartystreets/goconvey v0.0.0-20180222194500-ef6db91d284a // indirect
-	github.com/spf13/cobra v0.0.3 // indirect
+	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.2 // indirect
 	github.com/stretchr/testify v1.2.2 // indirect
 	github.com/zach-klippenstein/goregen v0.0.0-20160303162051-795b5e3961ea // indirect
