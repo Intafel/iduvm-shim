@@ -7,7 +7,7 @@
 # Build the goagen executable.
 bin/goagen: ./vendor/github.com/goadesign/goa/goagen/main.go
 	cd vendor/github.com/goadesign/goa/goagen; go build
-	cp vendor/github.com/goadesign/goa/goagen/goagen bin/
+	/usr/bin/cp vendor/github.com/goadesign/goa/goagen/goagen bin/
 
 # Generate goagen client code
 client: bin/goagen
