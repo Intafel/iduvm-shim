@@ -1,4 +1,6 @@
 *~
+bin/client.dylib
+bin/client.h
 bin/goagen
 client/*
 tool/*
