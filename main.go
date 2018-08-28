@@ -9,7 +9,7 @@ import (
 	"github.com/Intafel/iduvm-shim/client"
 )
 
-//export OpenBrowser
+//export ISTOpenBrowser
 func ISTOpenBrowser(guestID string) error {
 	c := client.New(nil)
 	path := client.OpenBrowserGuestPath(guestID)
@@ -19,7 +19,7 @@ func ISTOpenBrowser(guestID string) error {
 	return err
 }
 
-//export OpenFile
+//export ISTOpenFile
 func ISTOpenFile(guestID string, filePath string) error {
 	c := client.New(nil)
 	path := client.OpenFileGuestPath(guestID, filePath)
@@ -29,7 +29,7 @@ func ISTOpenFile(guestID string, filePath string) error {
 	return err
 }
 
-//export OpenURL
+//export ISTOpenURL
 func ISTOpenURL(guestID string, url_ string) error {
 	c := client.New(nil)
 	path := client.OpenURLGuestPath(guestID, url_)
@@ -39,7 +39,7 @@ func ISTOpenURL(guestID string, url_ string) error {
 	return err
 }
 
-//export StartGuest
+//export ISTStartGuest
 func ISTStartGuest(guestID string) error {
 	c := client.New(nil)
 	path := client.StartGuestPath(guestID)
@@ -49,7 +49,7 @@ func ISTStartGuest(guestID string) error {
 	return err
 }
 
-//export StopGuest
+//export ISTStopGuest
 func ISTStopGuest(guestID string) error {
 	c := client.New(nil)
 	path := client.StopGuestPath(guestID)
