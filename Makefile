@@ -1,4 +1,6 @@
 # Get goagen src. Probably shouldn't be run by hand
+# As this depends on go mod, if this repository is not on the GOPATH
+# you need to set GO111MODULE=on
 ./vendor/github.com/goadesign/goa/goagen/main.go:
 	go mod vendor
 
