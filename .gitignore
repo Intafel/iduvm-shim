@@ -5,3 +5,4 @@ bin/goagen
 client/*
 tool/*
 vendor/*
+main
