@@ -78,7 +78,7 @@ func getPluginList() iplugin.PluginList {
 /**
  * Run a client for each plugin in the plugin list and call the plugin
  */
-func callPlugins(resource string) {
+func callPlugins(resource string) string {
 	var log = setupLogger()
 	// There should only be a decider plugin provided by the plugin
 	var pluginMap = map[string]plugin.Plugin{
@@ -97,17 +97,18 @@ func callPlugins(resource string) {
 		rpcClient, err := client.Client()
 		if err != nil {
 			log.Error("Failed to instantiate rpc client", err.Error())
-			return
+			return ""
 		}
 		// Request the plugin
 		raw, err := rpcClient.Dispense("decider")
 		if err != nil {
 			log.Error("Failed to get decider plugin", err.Error())
-			return
+			return ""
 		}
 		decider := raw.(iplugin.Decider)
-		decider.Decide(resource)
+		return decider.Decide(resource)
 	}
+	return ""
 }
 
 //export ISTOpenBrowser
@@ -161,5 +162,5 @@ func ISTStopGuest(guestID string) error {
 }
 
 func main() {
-	callPlugins("blah.com")
+	fmt.Println(callPlugins("blah.com"))
 }

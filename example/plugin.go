@@ -13,6 +13,7 @@ type HelloDecider struct {
 }
 
 func (d *HelloDecider) Decide(resource string) string {
+	d.logger.Error(resource)
 	d.logger.Error("HELLO WORLDXXXXX")
 	return "Hello"
 }
